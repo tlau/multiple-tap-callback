@@ -1,0 +1,35 @@
+<head>
+  <title>testtouch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <h1>Tap callback fires multiple times</h1>
+  <div class="row">
+    <div class="small-12 columns">
+      {{#each items}}
+        {{> item}}
+      {{/each}}
+    </div>
+  </div>
+
+  <ul>
+  {{#each evtlog}}
+  <li> {{msg}}
+  {{/each}}
+  </ul>
+</template>
+
+<template name="item">
+  <div class="wrapper1">
+    <div class="wrapper2">
+      <div class="wrapper3">
+        <button class="button">{{name}}</button>
+      </div>
+    </div>
+  </div>
+</template>
